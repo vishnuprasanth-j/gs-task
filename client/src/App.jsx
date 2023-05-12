@@ -1,6 +1,6 @@
 import { useState,useEffect } from 'react'
 import axios from 'axios';
-import Card from './components/Card.jsx';
+
 
 function App() {
 const [userData,setUserData]=useState()
@@ -12,7 +12,7 @@ const fetchdata=async()=>{
    fetchdata() 
   })
   return (
-    <div>
+    <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
       {userData && userData.map((user,id) => (
       <div key={user._id} style={{display:'flex',gap:'8px'}}>
         <p>{id}.</p>
